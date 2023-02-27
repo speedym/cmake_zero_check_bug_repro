@@ -7,4 +7,11 @@ target_include_directories(library
         interface
 )
 
-#project(xxHash C)
+# Lines marked with FAILS cause ZERO_CHECK to NOT build every time on XCode.
+# Lines marked with OK work fine, ZERO_CHECK is built every time on XCode.
+#project(xxHash C) # FAILS
+#project(xxHash) # FAILS
+#project(library) # OK
+#project(xxLibrary) # FAILS
+#project(abc) # OK
+project(xxAbc) # FAILS
